@@ -7,20 +7,25 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.brashmonkey.spriter.Player;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theHeroOfJustice.cards.*;
 import theHeroOfJustice.characters.TheDefault;
-import theHeroOfJustice.events.IdentityCrisisEvent;
+import theHeroOfJustice.characters.*;
+import theHeroOfJustice.patches.combat.MagicCircuits;
 import theHeroOfJustice.util.IDCheckDontTouchPls;
 import theHeroOfJustice.util.TextureLoader;
 import theHeroOfJustice.variables.DefaultCustomVariable;
@@ -67,6 +72,7 @@ public class DefaultMod implements
         EditStringsSubscriber,
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
+        OnStartBattleSubscriber,
         PostInitializeSubscriber {
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
     // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
@@ -279,13 +285,13 @@ public class DefaultMod implements
     
     @Override
     public void receiveEditCharacters() {
-        logger.info("Beginning to edit characters. " + "Add " + TheDefault.Enums.THE_DEFAULT.toString());
+        logger.info("Beginning to edit characters. " + "Add " + TheDefault.Enums.THE_HERO_OF_JUSTICE.toString());
         
-        BaseMod.addCharacter(new TheDefault("the Hero of Justice", TheDefault.Enums.THE_DEFAULT),
-                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheDefault.Enums.THE_DEFAULT);
+        BaseMod.addCharacter(new TheDefault("the Hero of Justice", TheDefault.Enums.THE_HERO_OF_JUSTICE),
+                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheDefault.Enums.THE_HERO_OF_JUSTICE);
         
         receiveEditPotions();
-        logger.info("Added " + TheDefault.Enums.THE_DEFAULT.toString());
+        logger.info("Added " + TheDefault.Enums.THE_HERO_OF_JUSTICE.toString());
     }
     
     // =============== /LOAD THE CHARACTER/ =================
@@ -505,6 +511,13 @@ public class DefaultMod implements
                 BaseMod.addKeyword(getModID().toLowerCase(), keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
                 //  getModID().toLowerCase() makes your keyword mod specific (it won't show up in other cards that use that word)
             }
+        }
+    }
+
+    public void receiveOnBattleStart(AbstractRoom room){
+        if (AbstractDungeon.player.chosenClass == TheDefault.Enums.THE_HERO_OF_JUSTICE){
+            MagicCircuits.magicCircuitPerTurn.set(AbstractDungeon.player, 1);
+            MagicCircuits.magicCircuitAmount.set(AbstractDungeon.player, MagicCircuits.magicCircuitPerTurn.get(AbstractDungeon.player));
         }
     }
     
