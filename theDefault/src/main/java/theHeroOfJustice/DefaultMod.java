@@ -7,6 +7,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.brashmonkey.spriter.Player;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
@@ -26,6 +27,7 @@ import theHeroOfJustice.cards.*;
 import theHeroOfJustice.characters.TheDefault;
 import theHeroOfJustice.characters.*;
 import theHeroOfJustice.patches.combat.MagicCircuits;
+import theHeroOfJustice.ui.MagicCircuitUI;
 import theHeroOfJustice.util.IDCheckDontTouchPls;
 import theHeroOfJustice.util.TextureLoader;
 import theHeroOfJustice.variables.DefaultCustomVariable;
@@ -73,11 +75,18 @@ public class DefaultMod implements
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
         OnStartBattleSubscriber,
+        OnPlayerTurnStartSubscriber,
+        StartGameSubscriber,
+        PreRoomRenderSubscriber,
+        PostBattleSubscriber,
         PostInitializeSubscriber {
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
     // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
     public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
     private static String modID;
+
+    private static MagicCircuitUI magicCircuitUI;
+    public static boolean drawMagicCircuitUI = false;
 
     // Mod-settings settings. This is if you want an on/off savable button
     public static Properties theDefaultDefaultSettings = new Properties();
@@ -86,7 +95,7 @@ public class DefaultMod implements
 
     //This is for the in-game mod settings panel.
     private static final String MODNAME = "The Hero of Justice";
-    private static final String AUTHOR = "Fault and Gremious"; // And pretty soon - You!
+    private static final String AUTHOR = "Fault and Gremious";
     private static final String DESCRIPTION = "A character mod adding The Hero of Justice to Slay the Spire";
     
     // =============== INPUT TEXTURE LOCATION =================
@@ -514,15 +523,41 @@ public class DefaultMod implements
         }
     }
 
+    @Override
+    public void receiveStartGame(){
+        magicCircuitUI = new MagicCircuitUI();
+    }
+
+    @Override
     public void receiveOnBattleStart(AbstractRoom room){
         if (AbstractDungeon.player.chosenClass == TheDefault.Enums.THE_HERO_OF_JUSTICE){
             MagicCircuits.magicCircuitPerTurn.set(AbstractDungeon.player, 1);
             MagicCircuits.magicCircuitAmount.set(AbstractDungeon.player, MagicCircuits.magicCircuitPerTurn.get(AbstractDungeon.player));
+            drawMagicCircuitUI = true;
         }
     }
+
+    @Override
+    public void receiveOnPlayerTurnStart(){
+        if (AbstractDungeon.player.chosenClass == TheDefault.Enums.THE_HERO_OF_JUSTICE){
+            MagicCircuits.magicCircuitAmount.set(AbstractDungeon.player, MagicCircuits.magicCircuitAmount.get(AbstractDungeon.player) + MagicCircuits.magicCircuitPerTurn.get(AbstractDungeon.player));
+        }
+    }
+
+    @Override
+    public void receivePreRoomRender(SpriteBatch sb) {
+        if (AbstractDungeon.getCurrRoom() != null && drawMagicCircuitUI && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+            magicCircuitUI.render(sb);
+        }
+    }
+
+    @Override
+    public void receivePostBattle(AbstractRoom abstractRoom) {
+        drawMagicCircuitUI = false;
+    }
     
-    // ================ /LOAD THE KEYWORDS/ ===================    
-    
+    // ================ /LOAD THE KEYWORDS/ ===================
+
     // this adds "ModName:" before the ID of any card/relic/power etc.
     // in order to avoid conflicts if any other mod uses the same ID.
     public static String makeID(String idText) {
