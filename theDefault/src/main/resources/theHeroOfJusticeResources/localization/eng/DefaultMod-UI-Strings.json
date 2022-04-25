@@ -2,7 +2,7 @@
   "theHeroOfJustice:MagicCircuits": {
     "TEXT": [
       "Magic Circuits",
-      "Magic Circuits are a resource used to play Projection cards. NL You gain #b1 Magic Circuit at the start of each turn."
+      "#yProjection cards require Magic Circuits to play. NL You gain #b1 Magic Circuit at the start of each turn."
     ]
   }
 }

@@ -34,7 +34,7 @@ public class MagicCircuitUI extends ClickableUIElement {
     private static final float Y_OFF = AbstractDungeon.overlayMenu.energyPanel.current_y + 60f;
     private static final float HB_WIDTH = 175f;
     private static final float HB_HEIGHT = 104f;
-    private static final float COUNT_X = 48.0F * Settings.scale;
+    private static final float COUNT_X = 52.0F * Settings.scale;
     private static final float COUNT_Y = -16.0F * Settings.scale;
     private static final float DECK_TIP_X = 32F * Settings.scale;
     private static final float DECK_TIP_Y = 256.0F * Settings.scale;

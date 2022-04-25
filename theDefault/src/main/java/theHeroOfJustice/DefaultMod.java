@@ -537,7 +537,7 @@ public class DefaultMod implements
         magicCircuitUI = new MagicCircuitUI();
         if (AbstractDungeon.player.chosenClass == TheDefault.Enums.THE_HERO_OF_JUSTICE){
             MagicCircuits.magicCircuitPerTurn.set(AbstractDungeon.player, 1);
-            MagicCircuits.magicCircuitAmount.set(AbstractDungeon.player, MagicCircuits.magicCircuitPerTurn.get(AbstractDungeon.player));
+            //MagicCircuits.magicCircuitAmount.set(AbstractDungeon.player, MagicCircuits.magicCircuitPerTurn.get(AbstractDungeon.player));
             drawMagicCircuitUI = true;
         }
     }
