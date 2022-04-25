@@ -76,8 +76,6 @@ public class DefaultMod implements
         EditCharactersSubscriber,
         OnStartBattleSubscriber,
         OnPlayerTurnStartSubscriber,
-        StartGameSubscriber,
-        PreRoomRenderSubscriber,
         PostBattleSubscriber,
         PostInitializeSubscriber {
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
@@ -493,7 +491,11 @@ public class DefaultMod implements
         // OrbStrings
         BaseMod.loadCustomStringsFile(OrbStrings.class,
                 getModID() + "Resources/localization/eng/DefaultMod-Orb-Strings.json");
-        
+
+        // UIStrings
+        BaseMod.loadCustomStringsFile(UIStrings.class,
+                getModID() + "Resources/localization/eng/DefaultMod-UI-Strings.json");
+
         logger.info("Done editting strings");
     }
     
@@ -523,13 +525,16 @@ public class DefaultMod implements
         }
     }
 
-    @Override
-    public void receiveStartGame(){
-        magicCircuitUI = new MagicCircuitUI();
+    public static void renderMagicCircuits(SpriteBatch sb) {
+        if (AbstractDungeon.getCurrRoom() != null && drawMagicCircuitUI && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+            magicCircuitUI.setX(AbstractDungeon.overlayMenu.combatDeckPanel.current_x);
+            magicCircuitUI.render(sb);
+        }
     }
 
     @Override
     public void receiveOnBattleStart(AbstractRoom room){
+        magicCircuitUI = new MagicCircuitUI();
         if (AbstractDungeon.player.chosenClass == TheDefault.Enums.THE_HERO_OF_JUSTICE){
             MagicCircuits.magicCircuitPerTurn.set(AbstractDungeon.player, 1);
             MagicCircuits.magicCircuitAmount.set(AbstractDungeon.player, MagicCircuits.magicCircuitPerTurn.get(AbstractDungeon.player));
@@ -545,17 +550,12 @@ public class DefaultMod implements
     }
 
     @Override
-    public void receivePreRoomRender(SpriteBatch sb) {
-        if (AbstractDungeon.getCurrRoom() != null && drawMagicCircuitUI && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
-            magicCircuitUI.render(sb);
-        }
-    }
-
-    @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         drawMagicCircuitUI = false;
     }
-    
+
+
+
     // ================ /LOAD THE KEYWORDS/ ===================
 
     // this adds "ModName:" before the ID of any card/relic/power etc.
