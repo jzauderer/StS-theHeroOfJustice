@@ -28,6 +28,10 @@
     "NAME": "Strengthened Legs",
     "DESCRIPTION": "Gain !B! Block. NL Costs !M! theheroofjustice:Magic_Circuit."
   },
+  "theHeroOfJustice:SleepItOff": {
+    "NAME": "Sleep It Off",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! theheroofjustice:Magic_Circuits."
+  },
   "theHeroOfJustice:DefaultCommonPower": {
     "NAME": "Hold Place",
     "DESCRIPTION": "Gain !M! theheroofjustice:Keyword.",
