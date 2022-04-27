@@ -168,7 +168,7 @@ public class TheDefault extends CustomPlayer {
         retVal.add(Kanchou.ID);
 
         retVal.add(DesperateSwipe.ID);
-        retVal.add(MagneticWeapon.ID);
+        retVal.add(StrengthenedLegs.ID);
 
         return retVal;
     }

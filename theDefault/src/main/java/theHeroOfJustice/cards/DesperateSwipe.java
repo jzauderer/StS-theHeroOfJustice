@@ -3,6 +3,7 @@ package theHeroOfJustice.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -50,15 +51,22 @@ public class DesperateSwipe extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = CIRCUIT_GAIN;
-        this.tags.add(CardENUMS.PROJECTION);
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if(MagicCircuits.magicCircuitAmount.get(AbstractDungeon.player) <= CIRCUIT_CHECK)
-            MagicCircuits.magicCircuitAmount.set(AbstractDungeon.player, MagicCircuits.magicCircuitAmount.get(AbstractDungeon.player) + CIRCUIT_GAIN);
+            MagicCircuits.magicCircuitAmount.set(AbstractDungeon.player, MagicCircuits.magicCircuitAmount.get(AbstractDungeon.player) + 10);
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        if(MagicCircuits.magicCircuitAmount.get(AbstractDungeon.player) <= CIRCUIT_CHECK)
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR;
+        else
+            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
 
     // Upgraded stats.

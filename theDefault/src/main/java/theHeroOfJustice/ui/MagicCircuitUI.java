@@ -60,8 +60,10 @@ public class MagicCircuitUI extends ClickableUIElement {
                 float y = hitbox.y;
                 if(MagicCircuits.magicCircuitAmount.get(AbstractDungeon.player) < 3)
                     sb.setColor(Color.WHITE);
-                else
+                else if(MagicCircuits.magicCircuitAmount.get(AbstractDungeon.player) < 10)
                     sb.setColor(Color.YELLOW);
+                else
+                    sb.setColor(Color.LIME);
                 sb.draw(MagicCircuitTexture, x, y);
 
                 String msg = Integer.toString(MagicCircuits.magicCircuitAmount.get(AbstractDungeon.player));

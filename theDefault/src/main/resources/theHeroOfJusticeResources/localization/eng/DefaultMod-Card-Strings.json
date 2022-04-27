@@ -24,6 +24,10 @@
     "NAME": "Magnetic Weapon",
     "DESCRIPTION": "Deal !D! damage. NL Whenever you use theheroofjustice:Projection, return this from the discard pile to your Hand."
   },
+  "theHeroOfJustice:StrengthenedLegs": {
+    "NAME": "Strengthened Legs",
+    "DESCRIPTION": "Gain !B! Block. NL Costs !M! theheroofjustice:Magic_Circuit."
+  },
   "theHeroOfJustice:DefaultCommonPower": {
     "NAME": "Hold Place",
     "DESCRIPTION": "Gain !M! theheroofjustice:Keyword.",
