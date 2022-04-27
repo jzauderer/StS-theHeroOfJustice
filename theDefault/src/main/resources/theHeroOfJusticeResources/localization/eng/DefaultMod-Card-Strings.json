@@ -20,6 +20,10 @@
     "NAME": "Desperate Swipe",
     "DESCRIPTION": "Deal !D! damage. NL If you have !M! or fewer NL theheroofjustice:Magic_Circuits, gain !M!."
   },
+  "theHeroOfJustice:MagneticWeapon": {
+    "NAME": "Magnetic Weapon",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you use theheroofjustice:Projection, return this from the discard pile to your Hand."
+  },
   "theHeroOfJustice:DefaultCommonPower": {
     "NAME": "Hold Place",
     "DESCRIPTION": "Gain !M! theheroofjustice:Keyword.",
