@@ -157,7 +157,7 @@ public class TheDefault extends CustomPlayer {
         logger.info("Begin loading starter Deck Strings");
 
         retVal.add(DefaultCommonAttack.ID);
-        retVal.add(DefaultCommonAttack.ID);
+        //retVal.add(DefaultCommonAttack.ID);
         //retVal.add(DefaultCommonAttack.ID);
         //retVal.add(DefaultCommonAttack.ID);
         //retVal.add(DefaultCommonSkill.ID);
@@ -166,6 +166,8 @@ public class TheDefault extends CustomPlayer {
         retVal.add(DefaultCommonSkill.ID);
         retVal.add(DefaultCommonSkill.ID);
         retVal.add(Kanchou.ID);
+
+        retVal.add(DesperateSwipe.ID);
 
         return retVal;
     }

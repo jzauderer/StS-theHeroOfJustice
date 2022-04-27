@@ -16,6 +16,10 @@
     "NAME": "Bakuya",
     "DESCRIPTION": "theheroofjustice:Projection. NL Deal !D! damage. Exhaust."
   },
+  "theHeroOfJustice:DesperateSwipe": {
+    "NAME": "Desperate Swipe",
+    "DESCRIPTION": "Deal !D! damage. NL If you have !M! or fewer NL theheroofjustice:Magic_Circuits, gain !M!."
+  },
   "theHeroOfJustice:DefaultCommonPower": {
     "NAME": "Hold Place",
     "DESCRIPTION": "Gain !M! theheroofjustice:Keyword.",
