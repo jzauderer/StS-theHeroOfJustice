@@ -58,11 +58,14 @@ public class MagicCircuitUI extends ClickableUIElement {
             if (!AbstractDungeon.overlayMenu.combatDeckPanel.isHidden) {
                 float x = 0;
                 float y = hitbox.y;
-                sb.setColor(Color.WHITE);
+                if(MagicCircuits.magicCircuitAmount.get(AbstractDungeon.player) < 3)
+                    sb.setColor(Color.WHITE);
+                else
+                    sb.setColor(Color.YELLOW);
                 sb.draw(MagicCircuitTexture, x, y);
 
                 String msg = Integer.toString(MagicCircuits.magicCircuitAmount.get(AbstractDungeon.player));
-                sb.setColor(Color.WHITE);
+                //sb.setColor(Color.WHITE);
                 FontHelper.renderFontCentered(sb, FontHelper.turnNumFont, msg, x + COUNT_X, y + COUNT_Y);
 
 

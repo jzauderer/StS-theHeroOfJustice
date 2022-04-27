@@ -16,5 +16,20 @@
       "multikeyword"
     ],
     "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest is to match keywords like the single word keyword."
+  },
+  {
+    "NAMES": [
+      "projection"
+    ],
+    "DESCRIPTION": "#yProjection cards require you to spend #yMagic #yCircuits equal to the Energy cost of the card."
+  },
+  {
+    "PROPER_NAME": "Magic Circuits",
+    "NAMES": [
+      "Magic Circuits",
+      "magic_circuit",
+      "magic_circuits"
+    ],
+    "DESCRIPTION": "#yMagic #yCircuits are used to play #yProjection cards."
   }
 ]

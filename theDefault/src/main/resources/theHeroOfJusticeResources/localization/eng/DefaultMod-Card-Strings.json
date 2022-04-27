@@ -1,11 +1,20 @@
 {
   "theHeroOfJustice:DefaultCommonAttack": {
     "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff00ff]works.[]"
+    "DESCRIPTION": "Deal !D! damage."
   },
   "theHeroOfJustice:DefaultCommonSkill": {
     "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block. NL theheroofjustice:Multiword_Keyword."
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "theHeroOfJustice:Kanchou": {
+    "NAME": "Kanchou",
+    "DESCRIPTION": "theheroofjustice:Projection. NL Deal !D! damage. NL Add a *Bakuya to your hand.",
+    "UPGRADE_DESCRIPTION": "theheroofjustice:Projection. NL Deal !D! damage. NL Add a *Bakuya+ to your hand."
+  },
+  "theHeroOfJustice:Bakuya": {
+    "NAME": "Bakuya",
+    "DESCRIPTION": "theheroofjustice:Projection. NL Deal !D! damage. Exhaust."
   },
   "theHeroOfJustice:DefaultCommonPower": {
     "NAME": "Hold Place",
