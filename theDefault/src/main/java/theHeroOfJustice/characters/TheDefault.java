@@ -174,6 +174,7 @@ public class TheDefault extends CustomPlayer {
         retVal.add(SleepItOff.ID);
         retVal.add(Caladbolg.ID);
         retVal.add(RhoAias.ID);
+        retVal.add(Caliburn.ID);
 
         return retVal;
     }

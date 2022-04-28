@@ -32,9 +32,14 @@
     "NAME": "Sleep It Off",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! theheroofjustice:Magic_Circuits."
   },
+  "theHeroOfJustice:Caliburn": {
+    "NAME": "Caliburn",
+    "DESCRIPTION": "theheroofjustice:Projection. NL Deal !D! damage. NL Enemy loses !M! Strength. NL Exhaust."
+  },
   "theHeroOfJustice:RhoAias": {
     "NAME": "Rho Aias",
-    "DESCRIPTION": "theheroofjustice:Projection. NL Gain Block equal to your theheroofjustice:Magic_Circuits."
+    "DESCRIPTION": "theheroofjustice:Projection. NL Gain Block equal to your theheroofjustice:Magic_Circuits, twice.",
+    "UPGRADE_DESCRIPTION": "theheroofjustice:Projection. NL Gain Block equal to your theheroofjustice:Magic_Circuits, three times."
   },
   "theHeroOfJustice:Caladbolg": {
     "NAME": "Caladbolg",

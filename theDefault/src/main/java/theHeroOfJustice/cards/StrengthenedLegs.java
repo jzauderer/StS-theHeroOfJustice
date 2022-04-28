@@ -35,7 +35,7 @@ public class StrengthenedLegs extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int BLOCK = 10;
+    private static final int BLOCK = 12;
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
     private static final int CIRCUIT_COST = 1;

@@ -2,7 +2,9 @@ package theHeroOfJustice.cards;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHeroOfJustice.DefaultMod;
 import theHeroOfJustice.characters.TheDefault;
@@ -24,6 +26,9 @@ public class RhoAias extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(RhoAias.class.getSimpleName());
     public static final String IMG = makeCardPath("Skill.png");
+
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -72,6 +77,7 @@ public class RhoAias extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_PLUS_CIRCUIT_MULTIPLIER);
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }
