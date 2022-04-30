@@ -45,6 +45,11 @@
     "NAME": "Caladbolg",
     "DESCRIPTION": "theheroofjustice:Projection. NL Deal !D! damage to ALL enemies."
   },
+  "theHeroOfJustice:RapidProjections": {
+    "NAME": "Rapid Projections",
+    "DESCRIPTION": "Whenever you use theheroofjustice:Projection, draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Whenever you use theheroofjustice:Projection, draw !M! cards."
+  },
   "theHeroOfJustice:DefaultCommonPower": {
     "NAME": "Hold Place",
     "DESCRIPTION": "Gain !M! theheroofjustice:Keyword.",

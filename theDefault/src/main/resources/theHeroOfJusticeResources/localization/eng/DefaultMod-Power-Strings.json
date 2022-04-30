@@ -1,4 +1,8 @@
 {
+"theHeroOfJustice:RapidProjectionsPower": {
+        "NAME": "Rapid Projections",
+        "DESCRIPTIONS": ["Whenever you use #yProjection, draw #b", " card.", " cards."]
+},
 "theHeroOfJustice:CommonPower": {
         "NAME": "Placeholder Power",
         "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
