@@ -71,7 +71,9 @@ public class BeginChant extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(this.previewCardsList.get(0).makeStatEquivalentCopy(), 1));
+        AbstractCard c = new RhoAias();
+        c.modifyCostForCombat(-1);
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, 1));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(this.previewCardsList.get(1).makeStatEquivalentCopy(), 1, true, true));
     }
 

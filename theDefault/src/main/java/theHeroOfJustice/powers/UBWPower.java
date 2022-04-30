@@ -63,8 +63,10 @@ public class UBWPower extends AbstractPower implements CloneablePowerInterface {
     @Override
     public void onCardDraw(AbstractCard card) {
         if(card.tags.contains(CardENUMS.PROJECTION))
-            card.setCostForTurn(-1*amount);
+            card.setCostForTurn(card.cost - amount);
     }
+
+
 
 
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))

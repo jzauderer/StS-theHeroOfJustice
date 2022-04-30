@@ -169,13 +169,11 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(DefaultCommonSkill.ID);
         retVal.add(Kanchou.ID);
 
-        retVal.add(DesperateSwipe.ID);
-        retVal.add(StrengthenedLegs.ID);
         retVal.add(SleepItOff.ID);
         retVal.add(Caladbolg.ID);
-        retVal.add(RhoAias.ID);
         retVal.add(Caliburn.ID);
-        retVal.add(BeginChant.ID);
+        retVal.add(UnlimitedBladeWorks.ID);
+        retVal.add(UnlimitedBladeWorks.ID);
 
         return retVal;
     }
