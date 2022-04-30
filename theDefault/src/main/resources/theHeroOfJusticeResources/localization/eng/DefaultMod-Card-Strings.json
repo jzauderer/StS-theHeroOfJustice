@@ -41,14 +41,26 @@
     "DESCRIPTION": "theheroofjustice:Projection. NL Gain Block equal to your theheroofjustice:Magic_Circuits, twice.",
     "UPGRADE_DESCRIPTION": "theheroofjustice:Projection. NL Gain Block equal to your theheroofjustice:Magic_Circuits, three times."
   },
-  "theHeroOfJustice:Caladbolg": {
-    "NAME": "Caladbolg",
-    "DESCRIPTION": "theheroofjustice:Projection. NL Deal !D! damage to ALL enemies."
-  },
   "theHeroOfJustice:RapidProjections": {
     "NAME": "Rapid Projections",
     "DESCRIPTION": "Whenever you use theheroofjustice:Projection, draw !M! card.",
     "UPGRADE_DESCRIPTION": "Whenever you use theheroofjustice:Projection, draw !M! cards."
+  },
+  "theHeroOfJustice:Caladbolg": {
+    "NAME": "Caladbolg",
+    "DESCRIPTION": "theheroofjustice:Projection. NL Deal !D! damage to ALL enemies."
+  },
+  "theHeroOfJustice:BeginChant": {
+    "NAME": "Begin Chant",
+    "DESCRIPTION": "Add a 0-cost *Rho *Aias card to your hand. NL Add a *Continue *Chant to your draw pile. NL Exhaust."
+  },
+  "theHeroOfJustice:ContinueChant": {
+    "NAME": "Continue Chant",
+    "DESCRIPTION": "Gain !M! theheroofjustice:Magic_Circuits and !M! Strength. NL Add a *Reality *Marble to your draw pile. NL Exhaust."
+  },
+  "theHeroOfJustice:UnlimitedBladeWorks": {
+    "NAME": "Reality Marble",
+    "DESCRIPTION": "Gain !M! theheroofjustice:Magic_Circuits. NL theheroofjustice:Projection cards cost 1 less Energy."
   },
   "theHeroOfJustice:DefaultCommonPower": {
     "NAME": "Hold Place",

@@ -1,14 +1,18 @@
 {
-"theHeroOfJustice:RapidProjectionsPower": {
-        "NAME": "Rapid Projections",
-        "DESCRIPTIONS": ["Whenever you use #yProjection, draw #b", " card.", " cards."]
-},
-"theHeroOfJustice:CommonPower": {
-        "NAME": "Placeholder Power",
-        "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
-},
-"theHeroOfJustice:RarePower": {
-        "NAME": "Placeholder Power",
-        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
-}
+        "theHeroOfJustice:RapidProjectionsPower": {
+                "NAME": "Rapid Projections",
+                "DESCRIPTIONS": ["Whenever you use #yProjection, draw #b", " card.", " cards."]
+        },
+        "theHeroOfJustice:UBWPower": {
+                "NAME": "Unlimited Blade Works",
+                "DESCRIPTIONS": ["#yProjection cards cost #b", " less."]
+        },
+        "theHeroOfJustice:CommonPower": {
+                "NAME": "Placeholder Power",
+                "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
+        },
+        "theHeroOfJustice:RarePower": {
+                "NAME": "Placeholder Power",
+                "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+        }
 }
