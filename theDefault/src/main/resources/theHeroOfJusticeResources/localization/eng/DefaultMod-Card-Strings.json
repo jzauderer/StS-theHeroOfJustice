@@ -67,42 +67,8 @@
     "DESCRIPTION": "Gain !M! theheroofjustice:Keyword.",
     "UPGRADE_DESCRIPTION": "Gain !M! theheroofjustice:Keywords."
   },
-  "theHeroOfJustice:DefaultUncommonAttack": {
-    "NAME": "Big slap",
-    "DESCRIPTION": "Deal !D! damage."
-  },
-  "theHeroOfJustice:DefaultUncommonSkill": {
-    "NAME": "A Better Defend",
-    "DESCRIPTION": "Gain !B! Plated Armor. Affected by Dexterity."
-  },
-  "theHeroOfJustice:DefaultUncommonPower": {
-    "NAME": "Weirdness",
-    "DESCRIPTION": "Gain X theheroofjustice:Keywords.",
-    "UPGRADE_DESCRIPTION": "Gain X +1 theheroofjustice:Keywords."
-  },
-  "theHeroOfJustice:DefaultRareAttack": {
-    "NAME": "TOUCH",
-    "DESCRIPTION": "Deal !D! damage."
-  },
-  "theHeroOfJustice:DefaultRareSkill": {
-    "NAME": "For Each Loop x2",
-    "DESCRIPTION": "Apply !M! Vulnerable to all enemies, 2 times.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable to all enemies, 3 times."
-  },
   "theHeroOfJustice:DefaultRarePower": {
     "NAME": "In-Progress Form",
     "DESCRIPTION": "At the start of your turn, play a TOUCH."
-  },
-  "theHeroOfJustice:DefaultAttackWithVariable": {
-    "NAME": "Special Strike",
-    "DESCRIPTION": "Deal !D! damage [E] times. NL (Deal !theHeroOfJustice:ENERGY_DAMAGE! damage total.)"
-  },
-  "theHeroOfJustice:DefaultSecondMagicNumberSkill": {
-    "NAME": "Cool 2 Number Card",
-    "DESCRIPTION": "Apply !M! Vulnerable and !theHeroOfJustice:SecondMagic! poison to an enemy."
-  },
-  "theHeroOfJustice:OrbSkill": {
-    "NAME": "Get Orb",
-    "DESCRIPTION": "Channel 1 Default Orb."
   }
 }
