@@ -69,15 +69,11 @@
   "theHeroOfJustice:StructuralMastery": {
     "NAME": "Structural Mastery",
     "DESCRIPTION": "Whenever you use theheroofjustice:Projection, gain !M! Strength.",
-    "UPGRADE_DESCRIPTION": "Innate. Whenever you use theheroofjustice:Projection, gain !M! Strength."
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you use theheroofjustice:Projection, gain !M! Strength."
   },
   "theHeroOfJustice:DefaultCommonPower": {
     "NAME": "Hold Place",
     "DESCRIPTION": "Gain !M! theheroofjustice:Keyword.",
     "UPGRADE_DESCRIPTION": "Gain !M! theheroofjustice:Keywords."
-  },
-  "theHeroOfJustice:DefaultRarePower": {
-    "NAME": "In-Progress Form",
-    "DESCRIPTION": "At the start of your turn, play a TOUCH."
   }
 }
