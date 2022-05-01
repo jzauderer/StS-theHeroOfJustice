@@ -172,7 +172,9 @@ public class TheDefault extends CustomPlayer {
         retVal.add(SleepItOff.ID);
         retVal.add(Caladbolg.ID);
         retVal.add(Caliburn.ID);
-        retVal.add(BeginChant.ID);
+        retVal.add(StructuralMastery.ID);
+        retVal.add(StructuralMastery.ID);
+        retVal.add(UnlimitedBladeWorks.ID);
 
         return retVal;
     }

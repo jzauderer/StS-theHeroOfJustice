@@ -62,6 +62,11 @@
     "NAME": "Reality Marble",
     "DESCRIPTION": "Gain !M! theheroofjustice:Magic_Circuits. NL theheroofjustice:Projection cards cost 1 less Energy."
   },
+  "theHeroOfJustice:StructuralMastery": {
+    "NAME": "Structural Mastery",
+    "DESCRIPTION": "Whenever you use theheroofjustice:Projection, gain !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. Whenever you use theheroofjustice:Projection, gain !M! Strength."
+  },
   "theHeroOfJustice:DefaultCommonPower": {
     "NAME": "Hold Place",
     "DESCRIPTION": "Gain !M! theheroofjustice:Keyword.",

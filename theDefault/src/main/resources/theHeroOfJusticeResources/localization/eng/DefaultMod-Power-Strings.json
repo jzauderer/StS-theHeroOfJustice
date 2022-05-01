@@ -7,6 +7,10 @@
                 "NAME": "Unlimited Blade Works",
                 "DESCRIPTIONS": ["#yProjection cards cost #b", " less."]
         },
+        "theHeroOfJustice:StructuralMasteryPower": {
+                "NAME": "Structural Mastery",
+                "DESCRIPTIONS": ["Whenever you use #yProjection, gain #b", " Strength."]
+        },
         "theHeroOfJustice:CommonPower": {
                 "NAME": "Placeholder Power",
                 "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
