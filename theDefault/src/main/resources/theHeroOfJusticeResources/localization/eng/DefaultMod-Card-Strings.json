@@ -32,6 +32,10 @@
     "NAME": "Sleep It Off",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! theheroofjustice:Magic_Circuits."
   },
+  "theHeroOfJustice:SwordToss": {
+    "NAME": "Sword Toss",
+    "DESCRIPTION": "theheroofjustice:Projection. NL Deal !D! damage. NL Exhaust a card and gain theheroofjustice:Magic_Circuits equal to its cost."
+  },
   "theHeroOfJustice:Caliburn": {
     "NAME": "Caliburn",
     "DESCRIPTION": "theheroofjustice:Projection. NL Deal !D! damage. NL Enemy loses !M! Strength. NL Exhaust."

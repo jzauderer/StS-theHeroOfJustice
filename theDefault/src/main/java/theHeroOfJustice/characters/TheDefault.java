@@ -10,6 +10,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.colorless.Madness;
+import com.megacrit.cardcrawl.cards.red.Corruption;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
@@ -173,8 +174,8 @@ public class TheDefault extends CustomPlayer {
         retVal.add(Caladbolg.ID);
         retVal.add(Caliburn.ID);
         retVal.add(StructuralMastery.ID);
-        retVal.add(StructuralMastery.ID);
-        retVal.add(UnlimitedBladeWorks.ID);
+        retVal.add(SwordToss.ID);
+        retVal.add(Corruption.ID);
 
         return retVal;
     }
