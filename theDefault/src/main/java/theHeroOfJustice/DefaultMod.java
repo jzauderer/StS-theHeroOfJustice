@@ -32,6 +32,7 @@ import theHeroOfJustice.util.IDCheckDontTouchPls;
 import theHeroOfJustice.util.TextureLoader;
 import theHeroOfJustice.variables.DefaultCustomVariable;
 import theHeroOfJustice.variables.DefaultSecondMagicNumber;
+import theHeroOfJustice.variables.MagicCircuitDamage;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -427,6 +428,7 @@ public class DefaultMod implements
         // Add the Custom Dynamic variables
         BaseMod.addDynamicVariable(new DefaultCustomVariable());
         BaseMod.addDynamicVariable(new DefaultSecondMagicNumber());
+        BaseMod.addDynamicVariable(new MagicCircuitDamage());
         
         logger.info("Adding cards");
         // Add the cards

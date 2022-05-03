@@ -16,6 +16,10 @@
     "NAME": "Bakuya",
     "DESCRIPTION": "theheroofjustice:Projection. NL Deal !D! damage. Exhaust."
   },
+  "theHeroOfJustice:AzothSword": {
+    "NAME": "Azoth Sword",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Deal damage equal to your theheroofjustice:Magic_Circuits to all enemies.{!Location!|0= NL (Deals !theHeroOfJustice:MAGIC_CIRCUIT_DAMAGE! damage)}"
+  },
   "theHeroOfJustice:DesperateSwipe": {
     "NAME": "Desperate Swipe",
     "DESCRIPTION": "Deal !D! damage. NL If you have no NL theheroofjustice:Magic_Circuits, gain !M!."
