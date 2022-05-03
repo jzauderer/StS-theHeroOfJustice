@@ -57,15 +57,5 @@ public class SwordTossAction extends AbstractGameAction {
 
             this.tickDuration();
         }
-
-        //If we only have 1 card in hand, automatically target that to exhaust
-        if(p.hand.size() == 1){
-            if(p.hand.getBottomCard().costForTurn > 0)
-                MagicCircuits.magicCircuitAmount.set(AbstractDungeon.player, MagicCircuits.magicCircuitAmount.get(AbstractDungeon.player) + p.hand.getBottomCard().costForTurn);
-            p.hand.moveToExhaustPile(p.hand.getBottomCard());
-        }
-        else if(p.hand.size() > 1){
-
-        }
     }
 }
