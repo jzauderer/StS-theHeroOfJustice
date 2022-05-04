@@ -168,13 +168,12 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(DefaultCommonSkill.ID);
         //retVal.add(DefaultCommonSkill.ID);
         //retVal.add(DefaultCommonSkill.ID);
-        //retVal.add(Kanchou.ID);
+        retVal.add(Kanchou.ID);
 
         retVal.add(SleepItOff.ID);
         retVal.add(Caladbolg.ID);
-        retVal.add(StructuralMastery.ID);
-        retVal.add(SwordToss.ID);
         retVal.add(AzothSword.ID);
+        retVal.add(Archery.ID);
 
         return retVal;
     }

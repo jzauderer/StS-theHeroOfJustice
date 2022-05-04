@@ -20,6 +20,10 @@
     "NAME": "Azoth Sword",
     "DESCRIPTION": "{@@}Deal !D! damage. NL Deal damage equal to your theheroofjustice:Magic_Circuits to all enemies.{!Location!|0= NL (Deals !M! damage)}"
   },
+  "theHeroOfJustice:Archery": {
+    "NAME": "Archery",
+    "DESCRIPTION": "Deal !D! damage. NL If there is only one enemy, deal !D! damage again."
+  },
   "theHeroOfJustice:DesperateSwipe": {
     "NAME": "Desperate Swipe",
     "DESCRIPTION": "Deal !D! damage. NL If you have no NL theheroofjustice:Magic_Circuits, gain !M!."
