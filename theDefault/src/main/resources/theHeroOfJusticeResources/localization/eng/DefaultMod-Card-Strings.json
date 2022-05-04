@@ -18,7 +18,7 @@
   },
   "theHeroOfJustice:AzothSword": {
     "NAME": "Azoth Sword",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Deal damage equal to your theheroofjustice:Magic_Circuits to all enemies.{!Location!|0= NL (Deals !theHeroOfJustice:MAGIC_CIRCUIT_DAMAGE! damage)}"
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Deal damage equal to your theheroofjustice:Magic_Circuits to all enemies.{!Location!|0= NL (Deals !M! damage)}"
   },
   "theHeroOfJustice:DesperateSwipe": {
     "NAME": "Desperate Swipe",

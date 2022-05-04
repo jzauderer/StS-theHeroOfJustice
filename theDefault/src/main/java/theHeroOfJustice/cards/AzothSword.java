@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import theHeroOfJustice.DefaultMod;
 import theHeroOfJustice.characters.TheDefault;
 import theHeroOfJustice.patches.combat.MagicCircuits;
@@ -53,17 +54,21 @@ public class AzothSword extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, MagicCircuits.magicCircuitAmount.get(AbstractDungeon.player), damageTypeForTurn, AbstractGameAction.AttackEffect.SMASH));
+        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, magicNumber, damageTypeForTurn, AbstractGameAction.AttackEffect.SMASH));
+        for(int i = 0; i < AbstractDungeon.getCurrRoom().monsters.monsters.size(); i++){
+            if(AbstractDungeon.getCurrRoom().monsters.monsters.get(i).equals(m))
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, multiDamage[i], damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        }
     }
 
+    //Calculate the multi-target portion of the damage (stored in magic number)
     @Override
     public void applyPowers()
     {
-        magicNumber = baseMagicNumber;
+        magicNumber = baseMagicNumber * MagicCircuits.magicCircuitAmount.get(AbstractDungeon.player);
 
         int tmp = baseDamage;
-        baseDamage = baseMagicNumber;
+        baseDamage = magicNumber;
 
         super.applyPowers();
 
@@ -75,22 +80,17 @@ public class AzothSword extends AbstractDynamicCard {
         isMagicNumberModified = (magicNumber != baseMagicNumber);
     }
 
+
+    //Calculate the single-target portion of the damage
     @Override
     public void calculateCardDamage(AbstractMonster mo)
     {
-        magicNumber = baseMagicNumber;
-
-        int tmp = baseDamage;
-        baseDamage = baseMagicNumber;
-
         super.calculateCardDamage(mo);
-
-        magicNumber = damage;
-        baseDamage = tmp;
-
-        super.calculateCardDamage(mo);
-
-        isMagicNumberModified = (magicNumber != baseMagicNumber);
+        for(int i = 0; i < AbstractDungeon.getCurrRoom().monsters.monsters.size(); i++){
+            if(AbstractDungeon.getCurrRoom().monsters.monsters.get(i).equals(mo))
+                damage = multiDamage[i];
+        }
+        isDamageModified = (baseDamage != damage);
     }
 
     @Override
