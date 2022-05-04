@@ -174,6 +174,7 @@ public class TheDefault extends CustomPlayer {
         retVal.add(Caladbolg.ID);
         retVal.add(AzothSword.ID);
         retVal.add(Archery.ID);
+        retVal.add(SupportingFire.ID);
 
         return retVal;
     }
