@@ -40,6 +40,10 @@
     "NAME": "Strengthened Legs",
     "DESCRIPTION": "Gain !B! Block. NL Costs !M! theheroofjustice:Magic_Circuit."
   },
+  "theHeroOfJustice:Reflection": {
+    "NAME": "Reflection",
+    "DESCRIPTION": "Gain !B! Block. NL If the last card played this combat was a theheroofjustice:Projection, gain [E]."
+  },
   "theHeroOfJustice:SleepItOff": {
     "NAME": "Sleep It Off",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! theheroofjustice:Magic_Circuits."
