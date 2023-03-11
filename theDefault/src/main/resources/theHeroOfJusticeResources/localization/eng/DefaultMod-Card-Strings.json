@@ -24,6 +24,10 @@
     "NAME": "Archery",
     "DESCRIPTION": "Deal !D! damage. NL If there is only one enemy, deal !D! damage again."
   },
+  "theHeroOfJustice:SwordRain": {
+    "NAME": "Sword Rain",
+    "DESCRIPTION": "theheroofjustice:Projection. NL Deal !D! damage to ALL enemies !M! times."
+  },
   "theHeroOfJustice:SupportingFire": {
     "NAME": "Supporting Fire",
     "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
