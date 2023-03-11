@@ -26,7 +26,7 @@ public class Caladbolg extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(Caladbolg.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("Caladbolg.png");
 
     // /TEXT DECLARATION/
 

@@ -26,7 +26,7 @@ public class Archery extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(Archery.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("Archery.png");
 
     // /TEXT DECLARATION/
 

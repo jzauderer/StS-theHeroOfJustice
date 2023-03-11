@@ -25,7 +25,7 @@ public class AzothSword extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(AzothSword.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("AzothSword.png");
 
     // /TEXT DECLARATION/
 

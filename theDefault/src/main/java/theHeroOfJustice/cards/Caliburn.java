@@ -27,7 +27,7 @@ public class Caliburn extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(Caliburn.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("Caliburn.png");
 
     // /TEXT DECLARATION/
 
