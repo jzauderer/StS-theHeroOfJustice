@@ -25,7 +25,7 @@ public class StrategyMeeting extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(StrategyMeeting.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("StrategyMeeting.png");
 
     // /TEXT DECLARATION/
 

@@ -29,7 +29,7 @@ public class Kanchou extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(Kanchou.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("Kanchou.png");
 
     // /TEXT DECLARATION/
 
