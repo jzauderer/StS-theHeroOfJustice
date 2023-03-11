@@ -59,7 +59,7 @@ public class SurpassTheOriginal extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
         for(int i = 0; i < m.powers.size(); i++){
             if(m.powers.get(i).type.equals(AbstractPower.PowerType.BUFF))
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, 2)));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber)));
         }
     }
 

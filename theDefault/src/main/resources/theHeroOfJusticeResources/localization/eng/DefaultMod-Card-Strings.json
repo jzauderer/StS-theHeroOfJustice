@@ -52,6 +52,10 @@
     "NAME": "Sleep It Off",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! theheroofjustice:Magic_Circuits."
   },
+  "theHeroOfJustice:StrategyMeeting": {
+    "NAME": "Strategy Meeting",
+    "DESCRIPTION": "Gain !M! theheroofjustice:Magic_Circuits. NL Draw 2 more cards at the start of next turn. NL End your turn."
+  },
   "theHeroOfJustice:SurpassTheOriginal": {
     "NAME": "Surpass",
     "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength for each buff on the enemy."
