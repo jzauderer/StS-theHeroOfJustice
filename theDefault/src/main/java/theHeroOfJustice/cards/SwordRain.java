@@ -23,7 +23,7 @@ public class SwordRain extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(SwordRain.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("SwordRain.png");
 
     // /TEXT DECLARATION/
 

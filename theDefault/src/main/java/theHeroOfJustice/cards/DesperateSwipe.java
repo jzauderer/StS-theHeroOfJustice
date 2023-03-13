@@ -26,7 +26,7 @@ public class DesperateSwipe extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(DesperateSwipe.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("DesperateSwipe.png");
 
     // /TEXT DECLARATION/
 
